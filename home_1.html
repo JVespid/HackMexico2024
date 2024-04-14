@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../CSS/registro.css">
+    <link rel="stylesheet" href="../CSS/general.css">
+</head>
+<body>
+    <div class="container">
+        <button name="boton"><h2>Haz una compra</h2></button>
+    </div>
+
+    <div class="container">
+      <button bname="conoce"><h2>Mejorara tus finanzas.</h2></button>
+    </div>
+    <div class="container">
+      <button bname="conoce"><h2>Nosotros.</h2></button>
+    </div>
+
+    <script>
+        // Función para redirigir al usuario a cita.html
+        function redirectToCitaPage() {
+            window.location.href = "cita.html";
+        }
+
+        // Agregamos un evento de clic al botón de registro
+        document.getElementById("registroButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe automáticamente
+            redirectToCitaPage(); // Redirige al usuario a cita.html
+        });
+    </script>
+</body>
+</html>
