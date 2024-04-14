@@ -9,28 +9,66 @@
     <link rel="stylesheet" href="./CSS/general.css">
 </head>
 <body>
+
     <div class="container">
         <h2>Registro</h2>
-        <form id="registroForm" action="procesar_registro.php" method="post">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <input type="password" name="contrasena" placeholder="Contraseña" required>
-            <input type="password" name="confirmar_contrasena" placeholder="Confirmar contraseña" required>
-            <input type="submit" value="Registrarse" id="registroButton">
-        </form>
-    </div>
 
-    <script>
-        // Función para redirigir al usuario a cita.html
-        function redirectToCitaPage() {
-            window.location.href = "cita.html";
-        }
+        <div class="form-control">
+            <label for="name" id="label-name">
+                <p>Primer y segundo nombre </p>
+            </label>
+    
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Nombre" />
+        </div>
 
-        // Agregamos un evento de clic al botón de registro
-        document.getElementById("registroButton").addEventListener("click", function(event) {
-            event.preventDefault(); // Evita que el formulario se envíe automáticamente
-            redirectToCitaPage(); // Redirige al usuario a cita.html
-        });
-    </script>
+        <div class="form-control">
+            <label for="name" id="label-name">
+                <p>Apellido paterno </p>
+            </label>
+    
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Apellido paterno" />
+        </div>
+        
+        <div class="form-control">
+            <label for="name" id="label-name">
+                <p>Apellido materno </p>
+            </label>
+    
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Apellido materno..." />
+        </div>
+
+        <div class="container">
+            <p>Ingrese su fecha de nacimiento</p>
+            <form action="procesar_fecha_nacimiento.php" method="post">
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+            </form>
+        </div>
+
+        <div class="container">
+            <p>Ingrese su número de teléfono</p>
+            <form action="procesar_telefono.php" method="post">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="\+52 \d{10}" placeholder="+52 1234567890" required>
+                <small>Por favor ingrese un número de teléfono válido en formato internacional (+52 1234567890).</small>
+            </form>
+        </div>
+        <button>Ingresar Numero</button>
+
+        <div class="container">
+            <p>Ingresa el código enviado:</p>
+            <input type="text" name="codigo" placeholder="XXXX" maxlength="4" pattern="\d{4}" required>
+            <button>Reenviar código</button>
+        </div>
+        <a href="registro2.html"> Siguiente </a>
 </body>
 </html>

@@ -9,13 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Iniciar sesión</h1>
-        <p> Enviar codigo a: </p>
-        <h2>XX XXXX XX66</h2>
-        <h3><a href="verificacion.html">Enviar código de verificación</a></h3>
+        <h2>Ingresa el código enviado a XX XXXX XX66</h2>
+        <input type="text" name="codigo" placeholder="Ingresa el código" maxlength="4" pattern="\d{4}" title="El código debe contener exactamente 4 dígitos numéricos." required>
+        <h3><a href="Home.html">Verificar codigo</a></h3>
         </form>
-        <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+        <p>¿No te llegó? <a href="verificacion.html">Reenviar código</a></p>
     </div>
 </body>
 </html>
-
