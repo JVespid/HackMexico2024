@@ -80,3 +80,12 @@ h6 {
 img{
   object-fit: cover;
 }
+.index{
+
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  a{
+    padding: 10px 20px;
+  }
+}

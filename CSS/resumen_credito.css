@@ -31,7 +31,6 @@
         display: flex;
         justify-content: space-between;
         &>div{
-            border: solid 1px red;
             border-radius: 50%;
             overflow: hidden;
             display: flex;

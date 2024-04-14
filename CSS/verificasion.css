@@ -9,7 +9,6 @@
   color: var(--color-blue);
 }
 .logo-container {
-  border: solid 1px red;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -51,6 +50,9 @@
       border-radius: 0;
       border: 0px solid black;
       border-bottom: 2px solid var(--color-blue);
+      text-align: center;
+      color: var(--color-blue);
+      font-size: 2rem;
     }
   }
   .btn {
