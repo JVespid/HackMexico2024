@@ -1,51 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <link rel="stylesheet" href="./CSS/general.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href="./CSS/registro.css">
-    <link rel="stylesheet" href="./CSS/general.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="./CSS/registro2.css">
+  <link rel="stylesheet" href="./CSS/general.css">
 </head>
+
 <body>
-  <center>
-  <div class="contorno">
+  <div class="body">
+    <div></div>
+    <div></div>
 
-    <div class="container">
-        <h2>Crea una cuenta</h2>
+    <div class="logo-container">
+      <img src="./assets//logo.jpg" alt="logo">
+    </div>
 
-        <div class="form-control">
-            <label for="name" id="label-name">
-                <p>Sube la foto frontal de tu INE</p>
-            </label>
-            <img src="assets/ine-front.png" width="200" height="150">
-            <form>
-              <input type="file" id="archivo" name="archivo">
-            </form>
-          <br>
+    <h1>Registro</h1>
 
-          <label for="name" id="label-name">
-              <p>Sube la foto trasera de tu INE</p>
-          </label>
-          <img src="assets/ine-back.png" width="200" height="150">
-          <form>
-            <input type="file" id="archivo" name="archivo">
-          </form>
-          <br>
-
-          <label for="name" id="label-name">
-            <p>Sube una foto con tu credencial en mano</p>
-          </label>
-          <img src="assets/selfie.png" width="200" height="150">
-          <form>
-            <input type="file" id="archivo" name="archivo">
-          </form>
-          <br>
-
+    <div class="parada">
+      <div class="datos datos-p">
+        <p>Datos personales</p>
+        <div class="linea l2 ">
+          <div class="circulo l2"></div>
         </div>
-        <a href="cita.html"><t1>Registrar</t1></a>
       </div>
-    </center>
+
+      <div class="datos datos-i">
+        <p>Confirmación de Identidad</p>
+        <div class="linea linea-active">
+          <div class="circulo circulo-active"></div>
+        </div>
+      </div>
+    </div>
+    <p>Para validar tus datos, toma foto de
+      los siguientes documentos y subelos</p>
+
+      <div class="main">
+
+        <div class="container">
+          <h1>Toma foto o sube un Archivo</h1>
+          <div class="img">
+            <img src="./assets/ine-front.png" alt="ine frontal">
+          </div>
+          <p>sube o toma una foto de la parte frontal de tu ine</p>
+          <button class="btn-next">sube o toma foto</button>
+        </div>
+
+        <div class="container">
+          <h1>Toma foto o sube un Archivo</h1>
+          <div class="img">
+            <img src="./assets/ine-back.png" alt="ine reverso">
+          </div>
+          <p>sube o toma una foto de la parte reversa de tu ine</p>
+          <button class="btn-next">sube o toma foto</button>
+        </div>
+
+        <div class="container">
+          <h1>Toma foto o sube un Archivo</h1>
+          <div class="img">
+            <img src="./assets/selfie.png" alt="ine selfie">
+          </div>
+          <p>sube o toma una foto Selfie con tu credencial en mano</p>
+          <button class="btn-next">sube o toma foto</button>
+        </div>
+      </div>
+
+      <div class="btn">
+        <a href="./index.html" class="btn-error">Cancelar</a>
+        <a href="./home_1.html" class="btn-ok">Continuar</a>
+      </div>
+
+  </div>
 </body>
+
 </html>

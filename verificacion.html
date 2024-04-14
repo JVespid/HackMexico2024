@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión o registrarse</title>
+    <link rel="stylesheet" href="./CSS/verificasion.css">
     <link rel="stylesheet" href="./CSS/general.css">
-    <link rel="stylesheet" href="./CSS/index.css">
 </head>
+
 <body>
-    <center>
-    <div class="container">
-        <h2>Ingresa el código enviado a XX XXXX XX66</h2>
-        <input type="text" name="codigo" placeholder="Ingresa el código" maxlength="4" pattern="\d{4}" title="El código debe contener exactamente 4 dígitos numéricos." required>
-        <h3><a href="home_1.html">Verificar codigo</a></h3>
-        </form>
-        <p>¿No te llegó? <a href="verificacion.html">Reenviar código</a></p>
+    <div class="body">
+
+        <div class="logo-container">
+            <img src="./assets//logo.jpg" alt="logo">
+        </div>
+
+
+        <div class="container">
+            <div class="text">
+                <h2>Ingresa el codigo enviado a</h2>
+                <h2>XX XXXX XX66</h2>
+            </div>
+            <div class="inputs">
+                <input type="text"><input type="text"><input type="text"><input type="text">
+            </div>
+            <div class="btn">
+
+                <p>¿No te llegó? <a href="verificacion.html" class="btn-none">Reenviar código</a></p>
+            </div>
+        </div>
+        <div class="enviar">
+            <a href="./index.html" class="btn-error">Cancelar</a><a href="./home_1.html" class="btn-ok">Verificar</a>
+        </div>
+
+
     </div>
-    </center>
 </body>
+
 </html>

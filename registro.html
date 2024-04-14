@@ -1,78 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <link rel="stylesheet" href="./CSS/general.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="./CSS/registro.css">
     <link rel="stylesheet" href="./CSS/general.css">
 </head>
+
 <body>
+    <div class="body">
 
-    <center>
-        <div class = "contorno">
-        <div class="container">
-        <h2>Crea una cuenta</h2>
-
-        <div class="form-control">
-            <label for="name" id="label-name">
-                <p>Primer y segundo nombre </p>
-            </label>
-    
-            <!-- Input Type Text -->
-            <input type="text"
-                   id="name"
-                   placeholder="Nombre" />
+        <div class="logo-container">
+            <img src="./assets//logo.jpg" alt="logo">
         </div>
 
-        <div class="form-control">
-            <label for="name" id="label-name">
-                <p>Apellido paterno </p>
-            </label>
-    
-            <!-- Input Type Text -->
-            <input type="text"
-                   id="name"
-                   placeholder="Apellido paterno" />
+        <h1>Registro</h1>
+
+        <div class="parada">
+            <div class="datos datos-p">
+                <p>Datos personales</p>
+                <div class="linea linea-active">
+                    <div class="circulo circulo-active"></div>
+                </div>
+            </div>
+
+            <div class="datos datos-i">
+                <p>Confirmación de Identidad</p>
+                <div class="linea">
+                    <div class="circulo"></div>
+                </div>
+            </div>
         </div>
-        
-        <div class="form-control">
-            <label for="name" id="label-name">
-                <p>Apellido materno </p>
-            </label>
-    
-            <!-- Input Type Text -->
-            <input type="text"
-                   id="name"
-                   placeholder="Apellido materno..." />
+        <p>Ingresa los datos solicitados</p>
+
+        <div class="nombre form1 form-1">
+            <div>
+                <label for="">Primer y segundo nombre</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Apellido Paterno</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Apellido materno</label>
+                <input type="text">
+            </div>
         </div>
 
-        <div class="container">
-            <p>Ingrese su fecha de nacimiento</p>
-            <form action="procesar_fecha_nacimiento.php" method="post">
-                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
-                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
-            </form>
+
+        <div class="nombre form form1 form-2">
+            <div>
+                <label for="">fecha de nacimiento</label>
+                <input type="date">
+            </div>
         </div>
 
-        <div class="container">
-            <p>Ingrese su número de teléfono</p>
-            <form action="procesar_telefono.php" method="post">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" pattern="\+52 \d{10}" placeholder="+52 1234567890" required>
-                <small>Por favor ingrese un número de teléfono válido en formato internacional (+52 1234567890).</small>
-            </form>
-        </div>
-        <button>Ingresar Numero</button>
 
-        <div class="container">
-            <p>Ingresa el código enviado:</p>
-            <input type="text" name="codigo" placeholder="XXXX" maxlength="4" pattern="\d{4}" required>
-            <button>Reenviar código</button>
+
+
+        <div class="nombre form form1 form-3">
+            <div>
+                <label for="">Dirección linea 1</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Dirección linea 2</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">codigo postal</label>
+                <input type="text" class="corto">
+            </div>
+            <div>
+                <label for="">Calle y numero exterior</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Indicaciones adicionales</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
         </div>
-        <a href="registro2.html"> Siguiente </a>
+
+
+
+        <div class="nombre form form1 form-4">
+            <div>
+                <label for="">numero de teléfono</label>
+                <input type="tel">
+            </div>
+        </div>
+
+        <div class="confirm-code form form1 form-5">
+            <div>
+                <label for="">confirma numero de teléfono</label>
+                <p>ingresa el codigo de 4 dígitos que se envió
+                    por mensaje al numero ingresado</p>
+                <div class="combo">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="btn-code">
+                <button class="btn-next confirm">Confirmar</button>
+            </div>
+        </div>
+
+        <div class="btn-a">
+            <a href="./index.html" class="btn-error">Cancelar</a>
+            <button class="btn-next btnNext">siguiente</button>
+            <a href="./registro2.html" class="btn-ok form neext">Continuar</a>
+        </div>
+
+
     </div>
-</center>
+    <script>
+        let count = 1;
+
+
+        function main() {
+            const btnNext = document.querySelector(".btnNext")
+            const btnNext2 = document.querySelector(".neext")
+            const confirm = document.querySelector(".confirm")
+
+            btnNext.addEventListener("click", (e) => {
+
+                count++
+                if (count == 5) {
+                    btnNext.classList.add("form")
+                }
+                const block = document.querySelector(".form-" + (count - 1))
+                const hidden = document.querySelector(".form-" + count)
+
+                block.classList.add("form")
+                hidden.classList.remove("form")
+
+            })
+            confirm.addEventListener("click", (e) => {
+
+                btnNext2.classList.remove("form")
+
+            })
+
+        }
+        main();
+
+    </script>
 </body>
+
 </html>
