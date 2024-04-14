@@ -11,13 +11,26 @@
 <body>
     <div class="container">
         <h2>Registro</h2>
-        <form action="procesar_registro.php" method="post">
+        <form id="registroForm" action="procesar_registro.php" method="post">
             <input type="text" name="nombre" placeholder="Nombre" required>
             <input type="email" name="email" placeholder="Correo electrónico" required>
             <input type="password" name="contrasena" placeholder="Contraseña" required>
-            <input type="password" name="contrasena" placeholder="Contraseña" required>
-            <input type="submit" value="Registrarse">
+            <input type="password" name="confirmar_contrasena" placeholder="Confirmar contraseña" required>
+            <input type="submit" value="Registrarse" id="registroButton">
         </form>
     </div>
+
+    <script>
+        // Función para redirigir al usuario a cita.html
+        function redirectToCitaPage() {
+            window.location.href = "cita.html";
+        }
+
+        // Agregamos un evento de clic al botón de registro
+        document.getElementById("registroButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe automáticamente
+            redirectToCitaPage(); // Redirige al usuario a cita.html
+        });
+    </script>
 </body>
 </html>
