@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-In</title>
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/index.css">
+    <title>Iniciar sesión o registrarse</title>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <link rel="stylesheet" href="./CSS/index.css">
 </head>
 <body>
-    ComuniPréstamosss fdf
+    <div class="container">
+        <h1>Iniciar sesión</h1>
+        <p> Enviar codigo a: </p>
+        <h2>XX XXXX XX66</h2>
+
+        <form action="procesar_login.php" method="post">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="contrasena" placeholder="Contraseña" required>
+            <input type="submit" value="Iniciar sesión">
+        </form>
+        <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+    </div>
 </body>
 </html>
