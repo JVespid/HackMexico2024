@@ -1,19 +1,51 @@
-<!DOCTYPE html> 
-<html {{{ cool_tabs_html_attributes }}} >
-  <head>
-    
-  </head>
-  <body {{{ cool_tabs_body_attributes }}} >
-    <div class="form-control">
-        <label for="name" id="label-name">
-            <p>Name</p>
-        </label>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./CSS/registro.css">
+    <link rel="stylesheet" href="./CSS/general.css">
+</head>
+<body>
+  <center>
+  <div class="contorno">
 
-        <!-- Input Type Text -->
-        <input type="text"
-               id="name"
-               placeholder="Enter your name" />
-    </div>
-    <a href="cita.html">Registrar</a>
-  </body>
+    <div class="container">
+        <h2>Crea una cuenta</h2>
+
+        <div class="form-control">
+            <label for="name" id="label-name">
+                <p>Sube la foto frontal de tu INE</p>
+            </label>
+            <img src="assets/ine-front.png" width="200" height="150">
+            <form>
+              <input type="file" id="archivo" name="archivo">
+            </form>
+          <br>
+
+          <label for="name" id="label-name">
+              <p>Sube la foto trasera de tu INE</p>
+          </label>
+          <img src="assets/ine-back.png" width="200" height="150">
+          <form>
+            <input type="file" id="archivo" name="archivo">
+          </form>
+          <br>
+
+          <label for="name" id="label-name">
+            <p>Sube una foto con tu credencial en mano</p>
+          </label>
+          <img src="assets/selfie.png" width="200" height="150">
+          <form>
+            <input type="file" id="archivo" name="archivo">
+          </form>
+          <br>
+
+        </div>
+        <a href="cita.html"><t1>Registrar</t1></a>
+      </div>
+    </center>
+</body>
 </html>

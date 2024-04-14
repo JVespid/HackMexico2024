@@ -1,90 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="./CSS/general.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visita del Técnico</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        .container h2 {
-            margin-bottom: 20px;
-        }
-
-        .container input[type="date"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        .container input[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-            padding: 10px;
-            border: none;
-            border-radius: 3px;
-        }
-
-        .container input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        #mensaje {
-            display: none;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #d4edda;
-            border: 1px solid #c3e6cb;
-            border-radius: 3px;
-            color: #155724;
-        }
-    </style>
+    <title>Registro</title>
+    <link rel="stylesheet" href="./CSS/registro.css">
+    <link rel="stylesheet" href="./CSS/general.css">
 </head>
 <body>
+    <center>
     <div class="container">
-        <h2>Selecciona el día de la visita</h2>
-        <form id="formulario">
-            <input type="date" id="fecha" required>
-            <input type="submit" value="Confirmar">
-        </form>
-        <div id="mensaje"></div>
+        <h1>Registro Exitoso!!!</h1><br>
+        <a href="home_1.html"><t1>Ir a Inicio</t1></a>
     </div>
-
-    <script>
-        const formulario = document.getElementById('formulario');
-        const fechaInput = document.getElementById('fecha');
-        const mensaje = document.getElementById('mensaje');
-
-        formulario.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const fechaSeleccionada = new Date(fechaInput.value);
-            const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const fechaFormateada = fechaSeleccionada.toLocaleDateString('es-ES', opciones);
-            mensaje.innerHTML = `Un técnico irá a visitarlo el día ${fechaFormateada}`;
-            mensaje.style.display = 'block';
-        });
-    </script>
+    </center>
 </body>
 </html>
