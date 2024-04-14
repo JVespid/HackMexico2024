@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Instrucciones
 <hr>
 
@@ -21,3 +22,21 @@
 - **Resumen_pago.html**: esta pagina abre la confirmación del pago, dándole un resumen sobre los productos que comprara en la app y si tiene que pagar algún excedente
 - **ok.html**: esta pagina abre una pagina donde confirma que el pago fue realizado exitosamente y muestra el crédito disponible luego de la transacción
 - **home_2.html**: esta pagina abre la segunda forma en la que la pagina puede mostrar información, ma exactamente cuando tiene un crédito pendiente de pago, dando información para que el usuario pueda pagar su deuda
+=======
+index.html (Inicio de Sesión)
+
+///Inicio de sesión
+| Enviar codigo de verificación --> verificacion.html; 
+| verificar --> home_1.html
+
+///registro
+| Registrate --> registro.html;  
+| Continuar --> registro2.html; 
+| Continuar --> home_1.html
+
+///Solicita tu credito
+| Solicitar crédito --> resumen_credito.html
+| continuar --> Resumen_pago.html
+| Continuar --> ok.html
+| Continuar --> home_2.html
+>>>>>>> 46463530ce33c772cc8f37f5e9792a1fa23ffc3a
